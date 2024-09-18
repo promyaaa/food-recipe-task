@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recipe</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body onload="CallFoodData('Potato')">
+  <div class="mx-10">
+    <!-- navigation menu start -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-bold">
+            <li onclick="CallFoodData('Potato')" id="potato_sm"><a>Potato</a></li>
+          <li onclick="CallFoodData('Soup')" id="soup_sm"><a>Soup</a></li>
+          <li onclick="CallFoodData('Chicken')" id="chicken_sm"><a>Chicken</a></li>
+          <li onclick="CallFoodData('Beef')" id="beef_sm"><a>Beef</a></li>
+          </ul>
+        </div>
+        <a href="#"><img src="assets/logo.png" height="50px" width="50px" /></a>
+        <span class="font-bold">Restaurant Food</span>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 font-bold">
+          <li onclick="CallFoodData('Potato')" id="potato"><a>Potato</a></li>
+          <li onclick="CallFoodData('Soup')" id="soup"><a class="hover:round-none">Soup</a></li>
+          <li onclick="CallFoodData('Chicken')" id="chicken"><a>Chicken</a></li>
+          <li onclick="CallFoodData('Beef')" id="beef"><a>Beef</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- navigation menu end -->
+
+    <!-- carousel banner start -->
+    <div class="carousel w-full">
+
+      <div id="slide1" class="carousel-item relative w-full">
+        <div class="hero">
+          <img src="assets/banner/potato-banner.jpg" alt="" class="size-full p-2 border border-solid border-gray-300">
+
+          <div class="hero-content text-neutral-content text-center py-20">
+            <div class="max-w-md">
+              <h2 class="mb-5 text-5xl font-bold">Potato</h2>
+              <p class="mb-5 text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+                quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+                recusandae quas nihil corporis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <div class="hero">
+          <img src="assets/banner/soup-banner.png" alt="" class="size-full p-2 border border-solid border-gray-300">
+
+          <div class="hero-content text-neutral-content text-center py-20">
+            <div class="max-w-md">
+              <h2 class="mb-5 text-5xl font-bold">Soup</h2>
+              <p class="mb-5 text-neutral-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+                quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+                recusandae quas nihil corporis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+
+      <div id="slide3" class="carousel-item relative w-full">
+        <div class="hero">
+          <img src="assets/banner/chicken-stick-banner.png" alt="" class="size-full p-2 border border-solid border-gray-300">
+
+          <div class="hero-content text-neutral-content text-center py-20">
+            <div class="max-w-md">
+              <h2 class="mb-5 text-5xl font-bold">Chicken</h2>
+              <p class="mb-5 text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+                quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+                recusandae quas nihil corporis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+
+      <div id="slide4" class="carousel-item relative w-full">
+        <div class="hero">
+          <img src="assets/banner/meat-banner.png" alt="" class="size-full p-2 border border-solid border-gray-300">
+
+          <div class="hero-content text-neutral-content text-center py-20">
+            <div class="max-w-md">
+              <h2 class="mb-5 text-5xl font-bold">Meat</h2>
+              <p class="mb-5 text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+                quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+                recusandae quas nihil corporis!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+    <!-- carousel banner end -->
+    <h2 class="text-center text-3xl my-5 font-bold">Recipe!</h2>
+
+    <!-- data show section in card start -->
+    <div id="container">
+    </div>
+    <!-- data show section in card end -->
+    <!-- Modal popup data details start -->
+    <dialog id="my_modal_3" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <h2 id="modal_meal"></h2>
+        <p id="modal_category"></p>
+        <p id="modal_area"></p>
+        <p class="py-4" id="modal_instructions"></p>
+      </div>
+    </dialog>
+    <!-- Modal popup data details end -->
+
+
+    <!-- FAQ section start -->
+    <section class="my-10">
+      <h2 class="text-center text-3xl my-5 font-bold">FAQ</h2>
+      <div class="collapse collapse-arrow bg-base-200 rounded-none">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What do you know about Potato?</div>
+        <div class="collapse-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+            quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+            recusandae quas nihil corporis!</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-none">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What do you know about Soup?</div>
+        <div class="collapse-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+            quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+            recusandae quas nihil corporis!</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-none">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What do you know about Chicken?</div>
+        <div class="collapse-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+            quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+            recusandae quas nihil corporis!</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-none">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What do you know about Meat?</div>
+        <div class="collapse-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquid doloremque dolorem non? Ex qui unde quam harum inventore
+            quaerat quod debitis sint obcaecati deleniti rerum, laudantium
+            recusandae quas nihil corporis!</p>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ section end -->
+
+    <!-- Footer start -->
+    <footer class="footer p-10 bg-base-200 text-base-content bg-white">
+      <div>
+        <span class="footer-title">Company</span>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </div>
+      <div>
+        <span class="footer-title">Social</span>
+        <a class="link link-hover">Twitter</a>
+        <a class="link link-hover">Instagram</a>
+        <a class="link link-hover">Facebook</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
+      <div>
+        <p class="text-center">Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>2024 - All rights reserved by Abdur Rokib
+        </p>
+      </div>
+    </footer>
+
+    <!-- Footer end -->
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
